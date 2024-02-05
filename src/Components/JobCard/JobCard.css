@@ -1,0 +1,26 @@
+
+.company-logo {
+    width: 75px;
+    height: 75px;
+    background-color: #1971c2;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-right: 15px;
+    flex-shrink: 0; 
+  }
+  
+  
+  .job-card {
+    border: 2px solid black; 
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0 auto 20px;
+    max-width: 600px; 
+    transition: background-color 0.3s;
+    background-color: #e7f5ff;
+  }
+  
+  .job-card:hover {
+    background-color: #a5d8ff;
+  }
+  
