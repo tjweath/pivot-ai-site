@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+.App-logo { 
   height: 40vmin;
   pointer-events: none;
 }
@@ -40,4 +40,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .border {
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: background-color 0.3s;
+  background-color: #e7f5ff;
+}
+
+.border.hovered {
+  background-color: #a5d8ff;
+} */
+
+
+.company-logo {
+  width: 75px;
+  height: 75px;
+  background-color: #1971c2;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 15px;
+  flex-shrink: 0; 
+}
+
+
+.job-card {
+  border: 2px solid black; 
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 auto 20px;
+  max-width: 600px; 
+  transition: background-color 0.3s;
+  background-color: #e7f5ff;
+}
+
+.job-card:hover {
+  background-color: #a5d8ff;
 }
