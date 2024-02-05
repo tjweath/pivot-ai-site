@@ -1,12 +1,12 @@
-import JobCard from "../../Components/JobCard/JobCard"
 import UserProfile from "../../Components/UserProfile/UserProfile"
+import LoginPage from "../LoginPage/LoginPage"
+
 
 export default function ProfilePage() {
   return (
     <main>
-    <div>Profile Page</div>
     <UserProfile />
-    <JobCard />
+    <LoginPage />
     </main>
   )
 }
