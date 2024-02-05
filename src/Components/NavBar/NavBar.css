@@ -1,0 +1,32 @@
+.title-style {
+    text-decoration: none;
+    color: black;
+    font-size: 7vmin;
+}
+
+.links {
+    font-size: 3vmin;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vmin;
+
+}
+
+.link-style:hover::before {
+    width: 100%;
+}
+
+.link-style,
+.title-style {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.link-style:hover {
+    color: white; 
+  }
+  
+  .link-style:visited {
+    color: white; 
+  }
