@@ -65,8 +65,8 @@ const JobCard = () => {
         </div>
       ))}
     </div>
-  );
-  }, []); 
+  )
+  } 
 
 
 export default JobCard;
