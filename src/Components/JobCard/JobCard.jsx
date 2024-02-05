@@ -23,6 +23,7 @@ const JobCard = () => {
     };
 
     fetchData();
+
   }, []);
 
   const handleHover = (index) => {
@@ -65,6 +66,7 @@ const JobCard = () => {
       ))}
     </div>
   );
-};
+  }, []); 
+
 
 export default JobCard;
