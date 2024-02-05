@@ -44,3 +44,20 @@
     transform: rotate(360deg);
   }
 }
+
+.profile-body {
+  background-color: #99e9f2;
+}
+
+.card-text-center {
+  background-color: #ebfbee;
+}
+
+.profile-list {
+  /* border: 1px solid; */
+  padding: 10px; 
+  margin-bottom: 10px; /* Add margin to create space between elements */
+}
+
+
+
