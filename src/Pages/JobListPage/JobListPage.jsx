@@ -1,10 +1,12 @@
-import JobCard from "../../Components/JobCard/JobCard"
+import JobCard from "../../Components/JobCard/JobCard";
+
 
 export default function JobListPage() {
+
   return (
     <main>
-    <div>Job List Page</div>
-    <JobCard />
+      <div>Job List Page</div>
+      <JobCard />
     </main>
-  )
+  );
 }
