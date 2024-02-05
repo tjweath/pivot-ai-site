@@ -13,8 +13,6 @@ const JobCard = () => {
             app_key: `${process.env.REACT_APP_KEY}`,
           },
         });
-
-        // Assuming the job data is in the 'results' property of the response
         setJobs(response.data.results);
         console.log(response.data.results)
       } catch (error) {
@@ -23,19 +21,17 @@ const JobCard = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures that the effect runs only once on mount
+  }, []); 
 
   return (
     <div>
     {/* Render your job cards using the 'jobs' state */}
     {jobs.map((job) => (
       <div key={job.id} className="border p-3 mb-3">
-        {/* Render individual job card details */}
         <h2>{job.title}</h2>
         <p>{job.company.display_name}</p>
         <p>£{job.salary_max}</p>
         <p>{job.location.area[3]}</p>
-        {/* Add more job card details as needed */}
       </div>
     ))}
   </div>
