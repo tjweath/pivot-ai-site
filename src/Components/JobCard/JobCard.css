@@ -22,5 +22,6 @@
   
   .job-card:hover {
     background-color: #a5d8ff;
+    cursor: pointer;
   }
   

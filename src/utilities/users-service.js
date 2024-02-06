@@ -42,7 +42,7 @@ export function getUser() {
 }
 
 
-export function checkToken(){
-  return usersAPI.checkToken()
+export async function checkToken(){
+  return await usersAPI.checkToken()
   .then(dateStr => new Date(dateStr));
 }
