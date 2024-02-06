@@ -28,6 +28,15 @@ export default function NavBar() {
             >
               Profile
             </Link>
+            <Link
+              id="link"
+              className="nav-link mx-3 link-style"
+              style={{ color: '#1971c2', transition: 'color 0.3s' }}
+              to="/tips"
+              activeClassName="active-link"
+            >
+              Tips
+            </Link>
           </div>
         </div>
       </div>

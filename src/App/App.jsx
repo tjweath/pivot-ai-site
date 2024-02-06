@@ -5,9 +5,7 @@ import './App.css';
 import JobListPage from '../Pages/JobListPage/JobListPage';
 import ProfilePage from '../Pages/ProfilePage/ProfilePage';
 import JobDetailPage from '../Pages/JobDetailPage/JobDetailPage';
-
-function Home() {
-}
+import Tips from '../Pages/Tips.jsx/Tips';
 
 function App() {
   return (
@@ -15,6 +13,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/tips" element={<Tips />} />
         <Route path="/" element={<JobListPage />} />
         <Route path='/job/:id' Component={JobDetailPage}/>
       </Routes>
