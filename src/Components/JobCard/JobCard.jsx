@@ -1,16 +1,11 @@
 
-import { Link } from "react-router-dom";
 import "./JobCard.css"
-
-
 
 const JobCard = ({jobs, hoveredIndex, handleHover, handleLeave}) => {
 
   return (
-    
 <div>
       {jobs.map((job, index) => (
-        <Link to={`/job/${job.id}`} key={job.id} state={job}>
         <div 
           key={job.id} 
           className={`job-card ${hoveredIndex === index ? 'hovered' : ''}`}
@@ -37,7 +32,6 @@ const JobCard = ({jobs, hoveredIndex, handleHover, handleLeave}) => {
             </div>
           </div>
         </div>
-      </Link>
       ))}
     </div>
   )
