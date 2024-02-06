@@ -1,12 +1,22 @@
-import React from 'react'
-import JobCard from '../../Components/JobCard/JobCard'
+
+import { useLocation } from "react-router-dom";
 
 export default function JobDetailPage() {
-  return (
-    <main>
-    <div>Job Detail Page</div>
-       
+  const location = useLocation()
+  const job = location.state;
 
-    </main>
-  )
+  
+
+  if (!job) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <h1>{job.title}</h1>
+      <p>{job.description}</p>
+      <p>Salary: {job.salary_min} - {job.salary_max}</p>
+      {/* Display other job details as needed */}
+    </div>
+  );
 }
