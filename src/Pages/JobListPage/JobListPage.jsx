@@ -9,20 +9,17 @@ export default function JobListPage() {
   const [visibleJobCount, setVisibleJobCount] = useState(7);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [locationFilter, setLocationFilter] = useState("");
-  const [keywordFilter, setKeywordFilter] = useState("")
   const [salaryFilter, setSalaryFilter] = useState()
   
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.adzuna.com/v1/api/jobs/gb/search/2",
+          "https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=30c7f146&app_key=c648fa45330a45b6e9a92182c65ffe09&results_per_page=200&what=software%20junior%20",
           {
             params: {
               app_id: process.env.REACT_APP_ID,
               app_key: process.env.REACT_APP_KEY,
-              results_per_page: 200,
-              what: "developer,software,tech" // Specify terms separated by commas
             },
           }
         );
@@ -85,52 +82,50 @@ export default function JobListPage() {
     setDisplayedJobs(filteredJobs.slice(0, visibleJobCount));
   };
 
-  const handleKeywordFilterChange = (event) => {
-    setKeywordFilter(event.target.value);
-    const filteredJobs = jobs.filter(job => {
-      return job.description.some(desc => desc.toLowerCase().includes(event.target.value.toLowerCase()));
-    });
-    setDisplayedJobs(filteredJobs.slice(0, visibleJobCount));
-  };
-
 
   const handleSalaryFilterChange = (event) => {
-    const filterValue = parseInt(event.target.value); // Convert input value to an integer
-
-    setSalaryFilter(filterValue);
-    
-    const filteredJobs = jobs.filter(job => {
-      // Assuming job.salary_min is a single value, compare it with the filter value
-      return job.salary_min >= filterValue;
-    });
+    const filterValue = event.target.value.trim(); // Remove leading/trailing spaces
+    const parsedValue = parseInt(filterValue);
   
-    setDisplayedJobs(filteredJobs.slice(0, visibleJobCount));
+    if (!isNaN(parsedValue)) {
+      setSalaryFilter(parsedValue);
+      
+      const filteredJobs = jobs.filter(job => {
+        // Assuming job.salary_min is a single value, compare it with the filter value
+        return job.salary_min >= parsedValue;
+      });
+  
+      setDisplayedJobs(filteredJobs.slice(0, visibleJobCount));
+    }
   };
 
   return (
     <main>
-      <div>
-        <input 
-          type="text" 
-          id="locationFilter"
-          placeholder="City Name" 
-          value={locationFilter} 
-          onChange={handleLocationFilterChange} 
-        />
-        <input
-          type="number"
-          id="salaryFilter"
-          placeholder="20000"
-          value={salaryFilter}
-          onChange={handleSalaryFilterChange}
-        />
-        <input
-          type="text"
-          id="keywordFilter"
-          placeholder="Keywords"
-          value={keywordFilter}
-          onChange={handleKeywordFilterChange}
-        />
+   <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-md-4 mb-3"> {/* Adjust the column width */}
+          <input 
+            type="text" 
+            id="locationFilter"
+            className="form-control"
+            style={{ maxWidth: "250px" }} // Set max width to 150px
+            placeholder="City Name" 
+            value={locationFilter} 
+            onChange={handleLocationFilterChange} 
+          />
+        </div>
+        <div className="col-md-4 mb-3"> {/* Adjust the column width */}
+          <input
+            type="number"
+            id="salaryFilter"
+            className="form-control"
+            style={{ maxWidth: "250px" }} // Set max width to 150px
+            placeholder="20000"
+            value={salaryFilter}
+            onChange={handleSalaryFilterChange}
+          />
+        </div>
+      </div>
       </div>
       
       <JobCard 
