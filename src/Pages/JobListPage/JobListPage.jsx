@@ -74,5 +74,6 @@ export default function JobListPage() {
         <button className="back-to-top btn btn-primary" onClick={handleBackToTop}>Back to Top</button>
       )}
     </main>
+    
   );
 }
