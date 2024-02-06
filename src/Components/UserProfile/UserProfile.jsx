@@ -16,14 +16,9 @@ export default function UserProfile({ user, setUser }) {
   return (
     <div className="card-text-center">
       <div className="card-header">
-        <img
-          src="cat.png"
-          className="rounded-circle"
-          style={{ width: "150px", height: "150px" }}
-        />
       </div>
         <div>
-          <h1>Hi {userData.name}! </h1>
+          <h1>Hi {userData?.name}! </h1>
         </div>
       &nbsp; &nbsp;
       <h1>My Saved Jobs</h1>
