@@ -43,65 +43,67 @@ export default class SignUpForm extends Component {
           <div>
           <div className="container mt-5">
             <form autoComplete="off" onSubmit={this.handleSubmit}>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  name="name"
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                  required
-                />
+              <div className="mb-3 row justify-content-center">
+                <div className="col-sm-6">
+                  <label htmlFor="name" className="form-label">Name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    value={this.state.name}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  required
-                />
+              <div className="mb-3 row justify-content-center">
+                <div className="col-sm-6">
+                  <label htmlFor="email" className="form-label">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  required
-                />
+              <div className="mb-3 row justify-content-center">
+                <div className="col-sm-6">
+                  <label htmlFor="password" className="form-label">Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="confirm" className="form-label">
-                  Confirm
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="confirm"
-                  name="confirm"
-                  value={this.state.confirm}
-                  onChange={this.handleChange}
-                  required
-                />
+              <div className="mb-3 row justify-content-center">
+                <div className="col-sm-6">
+                  <label htmlFor="confirm" className="form-label">Confirm Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="confirm"
+                    name="confirm"
+                    value={this.state.confirm}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </div>
               </div>
-              <button type="submit" className="btn btn-primary" disabled={disable}>
-                SIGN UP
-              </button>
+              <div className="mb-3 row justify-content-center">
+                <div className="col-sm-6">
+                  <button type="submit" className="btn btn-primary" disabled={disable}>SIGN UP</button>
+                </div>
+              </div>
             </form>
           </div>
           <p className="error-message">&nbsp;{this.state.error}</p>
