@@ -1,6 +1,7 @@
 import axios from "axios";
 import JobCard from "../../Components/JobCard/JobCard";
 import { useEffect, useState } from "react";
+import "./JobListPage.css"
 
 export default function JobListPage() {
   const [jobs, setJobs] = useState([]);
@@ -9,8 +10,8 @@ export default function JobListPage() {
   const [visibleJobCount, setVisibleJobCount] = useState(7);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [locationFilter, setLocationFilter] = useState("");
-  const [salaryFilter, setSalaryFilter] = useState()
-  
+  const [salaryFilter, setSalaryFilter] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,7 +26,7 @@ export default function JobListPage() {
         );
 
         setJobs(response.data.results);
-        console.log(response.data.results)
+        console.log(response.data.results);
         setDisplayedJobs(response.data.results.slice(0, visibleJobCount));
       } catch (error) {
         console.error("Error fetching job data:", error);
@@ -44,102 +45,111 @@ export default function JobListPage() {
   };
 
   const handleLoadMore = () => {
-    const nextVisibleJobCount = visibleJobCount + 7;
-    setVisibleJobCount(nextVisibleJobCount);
-    
-    // Reapply filters to the entire list of jobs
-    const filteredJobs = jobs.filter(job => {
-      // Apply location filter
-      const locationFilterMatch = job.location.area.some(area => {
+    let nextVisibleJobCount = visibleJobCount + 7;
+  
+    // Filter the displayed jobs based on current filters
+    const filteredJobs = jobs.filter((job) => {
+      const locationFilterMatch = job.location.area.some((area) => {
         return area.toLowerCase().includes(locationFilter.toLowerCase());
       });
   
       // Apply salary filter
       const salaryFilterMatch = salaryFilter ? job.salary_min >= salaryFilter : true;
-      
+  
       // Return true if both location and salary match
       return locationFilterMatch && salaryFilterMatch;
     });
   
-    // Update displayedJobs with filtered list
+    // Update displayedJobs with filtered list and new visible job count
     setDisplayedJobs(filteredJobs.slice(0, nextVisibleJobCount));
-  
+    setVisibleJobCount(nextVisibleJobCount);
     setShowBackToTop(true);
   };
-
-  const handleBackToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
-
-  const handleLocationFilterChange = (event) => {
-    setLocationFilter(event.target.value);
-    const filteredJobs = jobs.filter(job => {
-      return job.location.area.some(area => area.toLowerCase().includes(event.target.value.toLowerCase()));
-    });
-    setDisplayedJobs(filteredJobs.slice(0, visibleJobCount));
-  };
-
-
+  
   const handleSalaryFilterChange = (event) => {
     const filterValue = event.target.value.trim(); // Remove leading/trailing spaces
     const parsedValue = parseInt(filterValue);
-  
+    
     if (!isNaN(parsedValue)) {
       setSalaryFilter(parsedValue);
       
-      const filteredJobs = jobs.filter(job => {
+      const filteredJobs = jobs.filter((job) => {
         // Assuming job.salary_min is a single value, compare it with the filter value
         return job.salary_min >= parsedValue;
       });
-  
-      setDisplayedJobs(filteredJobs.slice(0, visibleJobCount));
+      
+      setDisplayedJobs(filteredJobs.slice(0, 7));
     }
   };
-
+  
+  const handleLocationFilterChange = (event) => {
+    setLocationFilter(event.target.value);
+    const filteredJobs = jobs.filter((job) => {
+      return job.location.area.some((area) =>
+      area.toLowerCase().includes(event.target.value.toLowerCase())
+      );
+    });
+    setDisplayedJobs(filteredJobs.slice(0, 7));
+  };
+  
+  const handleBackToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  
   return (
     <main>
-   <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-4 mb-3"> {/* Adjust the column width */}
-          <input 
-            type="text" 
-            id="locationFilter"
-            className="form-control"
-            style={{ maxWidth: "250px" }} // Set max width to 150px
-            placeholder="City Name" 
-            value={locationFilter} 
-            onChange={handleLocationFilterChange} 
-          />
-        </div>
-        <div className="col-md-4 mb-3"> {/* Adjust the column width */}
-          <input
-            type="number"
-            id="salaryFilter"
-            className="form-control"
-            style={{ maxWidth: "250px" }} // Set max width to 150px
-            placeholder="20000"
-            value={salaryFilter}
-            onChange={handleSalaryFilterChange}
-          />
+      <div class="container">
+        <div class="row">
+          <div class="filter">
+            <input
+              type="text"
+              id="locationFilter"
+              class="form-control"
+              placeholder="Location 📍"
+              value={locationFilter}
+              onChange={handleLocationFilterChange}
+            />
+          </div>
+          <div class="filter">
+            <select
+              id="salaryFilter"
+              class="form-control"
+              value={salaryFilter}
+              onChange={handleSalaryFilterChange}
+            >
+              <option value="">Salary 💰</option>
+              <option value="20000">20k</option>
+              <option value="30000">30k</option>
+              <option value="40000">40k</option>
+              <option value="50000">50k</option>
+              <option value="60000">60k</option>
+            </select>
+          </div>
         </div>
       </div>
-      </div>
-      
-      <JobCard 
+
+      <JobCard
         jobs={displayedJobs}
         hoveredIndex={hoveredIndex}
         handleHover={handleHover}
         handleLeave={handleLeave}
       />
-     
+
       {jobs.length > displayedJobs.length && (
-        <button className="btn btn-primary" onClick={handleLoadMore}>Load More</button>
+        <button className="btn btn-primary" onClick={handleLoadMore}>
+          Load More 👇
+        </button>
       )}
       {showBackToTop && (
-        <button className="back-to-top btn btn-primary" onClick={handleBackToTop}>Back to Top</button>
+        <button
+          className="back-to-top btn btn-primary"
+          onClick={handleBackToTop}
+        >
+          Back Up ☝️
+        </button>
       )}
     </main>
   );
