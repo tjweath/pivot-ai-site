@@ -1,25 +1,18 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-
 export default function JobDetailPage() {
   const [saved, setSaved] = useState(false)
   const location = useLocation()
   const job = location.state;
-
-
-
   if (!job) {
     return <div>Loading...</div>;
   }
-
   const handleSaveJob = () => {
     const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
     const updatedSavedJobs = [...savedJobs, job];
     localStorage.setItem("savedJobs", JSON.stringify(updatedSavedJobs));
     setSaved(true);
   }
-  
-
   return (
     <>
       <div>
@@ -34,3 +27,10 @@ export default function JobDetailPage() {
     </>
   );
 }
+
+
+
+
+
+
+
