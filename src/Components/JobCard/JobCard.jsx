@@ -1,38 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+
 import "./JobCard.css"
 
-const JobCard = () => {
-  const [jobs, setJobs] = useState([]);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://api.adzuna.com/v1/api/jobs/gb/search/2?app_id=30c7f146&app_key=c648fa45330a45b6e9a92182c65ffe09&results_per_page=20&what=junior%20developer', {
-          params: {
-            app_id: `${process.env.REACT_APP_ID}`,
-            app_key: `${process.env.REACT_APP_KEY}`,
-          },
-        });
-
-        setJobs(response.data.results);
-      } catch (error) {
-        console.error('Error fetching job data:', error);
-      }
-    };
-
-    fetchData();
-
-  }, []);
-
-  const handleHover = (index) => {
-    setHoveredIndex(index);
-  }
-
-  const handleLeave = () => {
-    setHoveredIndex(null);
-  }
+const JobCard = ({jobs, hoveredIndex, handleHover, handleLeave}) => {
 
   return (
 <div>
