@@ -17,7 +17,7 @@ export default function NavBar() {
               to="/"
               activeClassName="active-link"
             >
-              Listings
+              Job Listings
             </Link>
             <Link
               id="link"
@@ -26,7 +26,7 @@ export default function NavBar() {
               to="/tips"
               activeClassName="active-link"
             >
-              Tips
+              CV Templates
             </Link>
             <Link
               id="link"
@@ -35,7 +35,16 @@ export default function NavBar() {
               to="/profile"
               activeClassName="active-link"
             >
-              Profile
+              My Jobs
+            </Link>
+            <Link
+              id="link"
+              className="nav-link mx-3 link-style"
+              style={{ color: '#1971c2', transition: 'color 0.3s' }}
+              to="/about-us"
+              activeClassName="active-link"
+            >
+              About Us
             </Link>
           </div>
         </div>

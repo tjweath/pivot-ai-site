@@ -94,7 +94,6 @@ export default function Tips() {
           </div>
         <div className="text-center mt-4">
           <h3>Need a CV template?</h3>
-          <button className="btn btn-primary mx-2 mb-3">Yes</button>
         </div>
         <br />
         </div>
@@ -124,7 +123,7 @@ export default function Tips() {
         <div>
           <h3>Professional CV</h3>
           <img
-            src="/img/professional.png"
+            src="/img/pro.png"
             alt="professional"
             style={{ maxWidth: "100%", height: "auto" }}
           />
