@@ -19,12 +19,7 @@ const JobCard = ({ jobs, hoveredIndex, handleHover, handleLeave }) => {
                 alignItems: "center",
               }}
             >
-              <div>
-                <img
-                  src="https://i.ibb.co/51SXjcx/UKSpook-Spotters-Logo.jpg"
-                  alt="Company Logo"
-                  className="company-logo"
-                />
+              <div className="company-logo">
               </div>
               <div style={{ marginLeft: "15px", textAlign: "left" }}>
                 <h2 style={{ color: "#1971C2", margin: 0, fontSize: "25px"}}>
