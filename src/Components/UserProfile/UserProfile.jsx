@@ -36,16 +36,26 @@ export default function UserProfile({ user, setUser }) {
       <ul>
         {savedJobs.map((job, index) => (
           <div key={index}>
-          <Link to={`/job/${job.id}`} key={job.id} state={job} className="Link">
-  <div className="job-entry">
-            {job.title} - {job.company.display_name}
-            </div>
+            <Link
+              to={`/job/${job.id}`}
+              key={job.id}
+              state={job}
+              className="Link"
+            >
+              <div className="job-entry">
+                {job.title} - {job.company.display_name}
+              </div>
             </Link>
-          <button type="submit" className="btn btn-primary" onClick={() => handleDeleteJob(index)}>X</button>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={() => handleDeleteJob(index)}
+            >
+              X
+            </button>
           </div>
         ))}
       </ul>
     </div>
   );
 }
-
