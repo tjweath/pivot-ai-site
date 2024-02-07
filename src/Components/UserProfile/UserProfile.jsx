@@ -111,7 +111,6 @@ export default function UserProfile({ user, setUser }) {
       <h1>Saved Jobs</h1>
       <div className="job-cards-container">
         {savedJobs.map((job, index) => (
-
           <div key={index}>
             <Link
               to={`/job/${job.id}`}
@@ -130,38 +129,98 @@ export default function UserProfile({ user, setUser }) {
             >
               X
             </button>
-
-          <div key={index} className="job-card-user-profile">
-            <Link to={`/job/${job.id}`} state={job} className="Link">
-              <div className="job-details">
-                <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-                  <div>
-                    <img
-                      src="https://i.ibb.co/51SXjcx/UKSpook-Spotters-Logo.jpg"
-                      alt="Company Logo"
-                      className="company-logo"
-                    />
-                  </div>
-                  <div style={{ marginLeft: "15px", textAlign: "left" }}>
-                    <h2 style={{ color: "#1971C2", margin: 0, fontSize: "25px" }}>{job.title.toUpperCase()}</h2>
-                    <h3 style={{ margin: 0, color: "black", fontSize: "20px" }}>{job.company.display_name.toUpperCase()}</h3>
-                    <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
-                      <p style={{ margin: 0, fontSize: "20px", color: "black" }}>
-                        £{job.salary_max.toLocaleString("en-GB", { maximumFractionDigits: 0 })}
-                      </p>
-                      <p style={{ paddingLeft: "10px", margin: 0, fontSize: "20px", color: "black" }}>
-                        📍 {job.location.area[3] || job.location.area[4]}
-                      </p>
+            <div key={index} className="job-card-user-profile">
+              <Link to={`/job/${job.id}`} state={job} className="Link">
+                <div className="job-details">
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div>
+                      <img
+                        src="https://i.ibb.co/51SXjcx/UKSpook-Spotters-Logo.jpg"
+                        alt="Company Logo"
+                        className="company-logo"
+                      />
+                    </div>
+                    <div
+                      style={{
+                        marginLeft: "15px",
+                        textAlign: "left",
+                      }}
+                    >
+                      <h2
+                        style={{
+                          color: "#1971C2",
+                          margin: 0,
+                          fontSize: "25px",
+                        }}
+                      >
+                        {job.title.toUpperCase()}
+                      </h2>
+                      <h3
+                        style={{
+                          margin: 0,
+                          color: "black",
+                          fontSize: "20px",
+                        }}
+                      >
+                        {job.company.display_name.toUpperCase()}
+                      </h3>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          alignItems: "center",
+                        }}
+                      >
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "20px",
+                            color: "black",
+                          }}
+                        >
+                          £
+                          {job.salary_max.toLocaleString("en-GB", {
+                            maximumFractionDigits: 0,
+                          })}
+                        </p>
+                        <p
+                          style={{
+                            paddingLeft: "10px",
+                            margin: 0,
+                            fontSize: "20px",
+                            color: "black",
+                          }}
+                        >
+                          📍 {job.location.area[3] || job.location.area[4]}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-            <button type="button" className={`btn ${job.applied ? 'btn-success' : 'btn-primary'} toggle-button`} onClick={() => handleToggleApplication(index)}>
-              {job.applied ? 'Applied' : 'Not Applied'}
-            </button>
-            <button type="button" className="btn btn-danger delete-button" onClick={() => handleDeleteJob(index)}>X</button>
-
+              </Link>
+              <button
+                type="button"
+                className={`btn ${
+                  job.applied ? "btn-success" : "btn-primary"
+                } toggle-button`}
+                onClick={() => handleToggleApplication(index)}
+              >
+                {job.applied ? "Applied" : "Not Applied"}
+              </button>
+              <button
+                type="button"
+                className="btn btn-danger delete-button"
+                onClick={() => handleDeleteJob(index)}
+              >
+                X
+              </button>
+            </div>
           </div>
         ))}
       </div>
