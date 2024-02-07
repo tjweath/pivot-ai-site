@@ -1,0 +1,18 @@
+ .job-card h1 {
+    color: #1971C2;
+  }
+  
+  .job-card .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .job-card .button-container .btn {
+    margin-right: 10px;
+    height: 40px;
+  }
+  
+  .job-card .map-container {
+    margin-top: 20px;
+  }
