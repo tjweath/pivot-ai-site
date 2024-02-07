@@ -1,32 +1,25 @@
 .title-style {
-    text-decoration: none;
-    color: black;
-    font-size: 7vmin;
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 10vmin !important; 
+    transition: transform 0.3s !important; /* Add !important for transition */
 }
 
 .links {
-    font-size: 3vmin;
-    display: flex;
-    align-items: center;
-    margin-bottom: 2vmin;
-
-}
-
-.link-style:hover::before {
-    width: 100%;
+    font-size: 5vmin !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 2vmin !important;
 }
 
 .link-style,
 .title-style {
-    font-family: "Protest Strike", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Protest Strike", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    transition: transform 0.3s !important; 
 }
 
 .link-style:hover {
-    color: white; 
-  }
-  
-  .link-style:visited {
-    color: white; 
-  }
+    transform: scale(1.1) !important;
+}
