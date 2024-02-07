@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 export default function JobDetailPage() {
-  const [saved, setSaved] = useState(false)
-  const location = useLocation()
-  const job = location.state;
+  
+const [saved, setSaved] = useState(false)
+const location = useLocation()
+const job = location.state;
+
+
   if (!job) {
     return <div>Loading...</div>;
   }
