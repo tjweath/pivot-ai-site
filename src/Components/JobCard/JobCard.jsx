@@ -27,10 +27,10 @@ const JobCard = ({ jobs, hoveredIndex, handleHover, handleLeave }) => {
                 />
               </div>
               <div style={{ marginLeft: "15px", textAlign: "left" }}>
-                <h2 style={{ color: "#1971C2", margin: 0 }}>
+                <h2 style={{ color: "#1971C2", margin: 0, fontSize: "25px"}}>
                   {job.title.toUpperCase()}
                 </h2>
-                <h3 style={{ margin: 0, color: "black" }}>
+                <h3 style={{ margin: 0, color: "black", fontSize: "20px" }}>
                   {job.company.display_name.toUpperCase()}
                 </h3>
                 <div
@@ -40,7 +40,7 @@ const JobCard = ({ jobs, hoveredIndex, handleHover, handleLeave }) => {
                     alignItems: "center",
                   }}
                 >
-                  <p style={{ margin: 0, fontSize: "18px", color: "black" }}>
+                  <p style={{ margin: 0, fontSize: "20px", color: "black" }}>
                     £
                     {job.salary_max.toLocaleString("en-GB", {
                       maximumFractionDigits: 0,
@@ -50,11 +50,11 @@ const JobCard = ({ jobs, hoveredIndex, handleHover, handleLeave }) => {
                     style={{
                       paddingLeft: "10px",
                       margin: 0,
-                      fontSize: "18px",
+                      fontSize: "20px",
                       color: "black",
                     }}
                   >
-                    {job.location.area[3] || job.location.area[4]}
+                    📍 {job.location.area[3] || job.location.area[4]}
                   </p>
                 </div>
               </div>
