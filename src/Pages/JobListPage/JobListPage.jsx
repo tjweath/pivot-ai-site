@@ -108,7 +108,7 @@ export default function JobListPage() {
               type="text"
               id="locationFilter"
               class="form-control"
-              placeholder="Location 📍"
+              placeholder="Location"
               value={locationFilter}
               onChange={handleLocationFilterChange}
             />
@@ -120,7 +120,7 @@ export default function JobListPage() {
               value={salaryFilter}
               onChange={handleSalaryFilterChange}
             >
-              <option value="">Salary 💰</option>
+              <option value="">Salary</option>
               <option value="20000">20k</option>
               <option value="30000">30k</option>
               <option value="40000">40k</option>
@@ -140,7 +140,7 @@ export default function JobListPage() {
 
       {jobs.length > displayedJobs.length && (
         <button className="btn btn-primary" onClick={handleLoadMore}>
-          Load More 👇
+          Load More
         </button>
       )}
       {showBackToTop && (
@@ -148,7 +148,7 @@ export default function JobListPage() {
           className="back-to-top btn btn-primary"
           onClick={handleBackToTop}
         >
-          Back Up ☝️
+          Back Up
         </button>
       )}
     </main>
