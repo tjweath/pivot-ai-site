@@ -23,8 +23,8 @@
   pointer-events: none; /* Disable pointer events for the content */
 }
 
-.job-card:hover {
-  background-color: #A5D8FF;
+.job-card.no-hover {
+  background-color: #a5d8ff;
 }
 
 
