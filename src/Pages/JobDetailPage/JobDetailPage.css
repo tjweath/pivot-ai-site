@@ -1,41 +1,54 @@
-.job-card.no-hover {
+.job-card-detail.no-hover {
+  background-color: #A5D8FF;
   cursor: default;
+  border: 2px solid black; 
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 5vmin;
+  max-width: 600px; 
+  position: relative
 }
 
-.job-card h1 {
+.job-card-detail h1 {
   color: #1971C2;
 }
 
-.job-card .button-container {
+.job-card-detail .button-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.job-card .button-container .btn {
+.job-card-detail .button-container .btn {
   margin-right: 10px;
   height: 40px;
 }
 
-.job-card .map-container {
+.job-card-detail .map-container {
   margin-top: 20px;
   margin: 0 auto;
   width: 100%;
   max-width: 450px;
 }
 
-.job-card .map-container iframe {
+.job-card-detail .map-container iframe {
   width: 100%;
   max-width: 100%;
   height: 300px;
 }
 
-.job-card p {
+.job-card-detail p {
   font-size: 18px; 
 }
 
 @media only screen and (max-width: 768px) {
-  .job-card p {
+  .job-card-detail p {
     font-size: 14px; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .job-card-detail {
+    margin: 20px;
   }
 }

@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./JobDetailPage.css";
+
+// Define isAuthenticated function here
+const isAuthenticated = () => {
+  const token = localStorage.getItem('token');
+  return !!token;
+};
 
 export default function JobDetailPage() {
   const [saved, setSaved] = useState(false);
@@ -32,7 +38,7 @@ export default function JobDetailPage() {
 
   return (
     <>
-      <div className="job-card no-hover">
+      <div className="job-card-detail no-hover">
         <h1>{job.title}</h1>
         <h3>{job.company.display_name.toUpperCase()}</h3>
         <p><strong>Job Description:</strong> {job.description}</p>
@@ -43,13 +49,19 @@ export default function JobDetailPage() {
         </p>
         <p>{job.location.area[3] || job.location.area[4]}</p>
         <div className="button-container">
-          <button
-            onClick={handleSaveJob}
-            disabled={saved}
-            className="btn btn-primary"
-          >
-            {saved ? "Job Saved" : "Save Job"}
-          </button>
+          { isAuthenticated() ? ( // Check if the user is authenticated
+            <button
+              onClick={handleSaveJob}
+              disabled={saved}
+              className="btn btn-primary"
+            >
+              {saved ? "Job Saved" : "Save Job"}
+            </button>
+          ) : (
+            <Link to="/profile" className="btn btn-primary"> {/* Redirect to profile page if not authenticated */}
+              Save Job
+            </Link>
+          )}
           <a
             href={job.redirect_url}
             target="_blank"
