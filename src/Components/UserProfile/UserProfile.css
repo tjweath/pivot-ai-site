@@ -35,3 +35,7 @@
     }
   }
   
+  .custom-select {
+    width: 150px !important; 
+    margin-right: 10px;
+  }
