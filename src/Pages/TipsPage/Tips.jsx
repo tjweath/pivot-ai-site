@@ -92,72 +92,70 @@ export default function Tips() {
               </div>
             </div>
           </div>
+        </div>
         <div className="text-center mt-4">
           <h3>Need a CV template?</h3>
         </div>
-        <br />
-        </div>
-      </div>
-      <div className="centered-grid">
-        <h4 className="intro mb-1" >
-          Unlock your creativity with our collection of CV templates! 🎨 Convert
-          these PDFs to your preferred editing format using{" "}
-          <a href="https://smallpdf.com/pdf-to-word">Smallpdf</a>.
-        </h4>
-        <br />
-        <div>
-          <h3>Simple CV</h3>
-          <img
-            src="/img/simple.png"
-            alt="simple"
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
-          <p>
-            Starting your career journey? 🌱 Want to keep it concise? 📄 Check
-            out this straightforward one-page resume template!
-          </p>
-          <a href="/templates/simple-cv.pdf" download>
-            Download Simple CV
-          </a>
-        </div>
-        <div>
-          <h3>Professional CV</h3>
-          <img
-            src="/img/pro.png"
-            alt="professional"
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
-          <p>
-            Ready to showcase your expertise and experience? 💼 Explore our
-            professional CV template designed to impress recruiters!
-          </p>
-          <a href="/templates/professional-cv.pdf" download>
-            Download Professional CV
-          </a>
-        </div>
-        <div>
-          <h3>Modern CV</h3>
-          <img
-            src="/img/modern.png"
-            alt="modern"
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
-          <p>
-            Want to stand out with a sleek and modern design? 🔥 Our modern CV
-            template is perfect for those aiming for a contemporary look!
-          </p>
-          <a href="/templates/modern-cv.pdf" download>
-            Download Modern CV
-          </a>
+        <div className="row">
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div>
+              <h3>Simple CV</h3>
+              <img
+                src="/img/simple.png"
+                alt="simple"
+                style={{ Width: "auto", height: "400px" }}
+              />
+              <p>
+                Starting your career journey? 🌱 Want to keep it concise? 📄 Check
+                out this straightforward one-page resume template!
+              </p>
+              <a href="/templates/simple-cv.pdf" download>
+                Download Simple CV
+              </a>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div>
+              <h3>Professional CV</h3>
+              <img
+                src="/img/pro.png"
+                alt="professional"
+                style={{ Width: "auto", height: "400px" }}
+              />
+              <p>
+                Ready to showcase your expertise and experience? 💼 Explore our
+                professional CV template designed to impress recruiters!
+              </p>
+              <a href="/templates/professional-cv.pdf" download>
+                Download Professional CV
+              </a>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div>
+              <h3>Modern CV</h3>
+              <img
+                src="/img/modern.png"
+                alt="modern"
+                style={{ Width: "auto", height: "400px" }}
+              />
+              <p>
+                Want to stand out with a sleek and modern design? 🔥 Our modern CV
+                template is perfect for those aiming for a contemporary look!
+              </p>
+              <a href="/templates/modern-cv.pdf" download>
+                Download Modern CV
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <button
-            className="btn btn-secondary mx-2 mb-4"
-            onClick={handleBackUp}
-          >
-            Back Up
-          </button>
+        className="btn btn-secondary mx-2 mb-4"
+        onClick={handleBackUp}
+      >
+        Back Up
+      </button>
     </div>
-    
   );
 }

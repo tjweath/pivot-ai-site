@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import './JobDetailPage.css'; 
+import "./JobDetailPage.css";
 
 export default function JobDetailPage() {
   const [saved, setSaved] = useState(false);
@@ -10,7 +9,7 @@ export default function JobDetailPage() {
 
   useEffect(() => {
     const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || [];
-    const isSaved = savedJobs.some(savedJob => savedJob.id === job.id);
+    const isSaved = savedJobs.some((savedJob) => savedJob.id === job.id);
     setSaved(isSaved);
   }, [job]);
 
@@ -36,14 +35,29 @@ export default function JobDetailPage() {
       <div className="job-card no-hover">
         <h1>{job.title}</h1>
         <h3>{job.company.display_name.toUpperCase()}</h3>
-        <p><strong>Job Description:</strong> {job.description}</p>
-        <p>Salary: £{job.salary_min.toLocaleString('en-GB', { maximumFractionDigits: 0 })}+</p>
+        <p>
+          <strong>Job Description:</strong> {job.description}
+        </p>
+        <p>
+          Salary: £
+          {job.salary_min.toLocaleString("en-GB", { maximumFractionDigits: 0 })}
+          +
+        </p>
         <p>{job.location.area[3] || job.location.area[4]}</p>
         <div className="button-container">
-          <button onClick={handleSaveJob} disabled={saved} className="btn btn-primary">
+          <button
+            onClick={handleSaveJob}
+            disabled={saved}
+            className="btn btn-primary"
+          >
             {saved ? "Job Saved" : "Save Job"}
           </button>
-          <a href={job.redirect_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a
+            href={job.redirect_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             See Full Description
           </a>
         </div>

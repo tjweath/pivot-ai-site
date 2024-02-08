@@ -26,7 +26,7 @@ export default function NavBar() {
               to="/tips"
               activeClassName="active-link"
             >
-              CV Templates
+              Templates
             </Link>
             <Link
               id="link"
