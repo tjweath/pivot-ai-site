@@ -18,28 +18,25 @@ const handleLogout = () => {
   setUser(null);
 };
 
-  return (
-    <main>
-      {user ? (
-        // User is logged in, show UserProfile
-        <div>
-        
+return (
+  <main>
+    {user ? (
+      <div>
         <UserProfile setUser={setUser}/>
         <button type="submit" className="btn btn-primary" onClick={handleLogout}>Logout</button>
-        </div>
-      ) : (
-        // User is not logged in, show SignUpForm and LoginForm
-        <div>
-          {showLoginForm ? (
-            <SignUpForm setUser={setUser} />
-          ) : (
-            <LoginForm setUser={setUser} />
-          )}
-          <button type="submit" className="btn btn-primary" onClick={toggleForm}>
-            {showLoginForm ? "Have an Account? Login Instead" : "No Account? Sign Up Here" }
-          </button>
-        </div>
-      )}
-    </main>
-  );
+      </div>
+    ) : (
+      <div>
+        {showLoginForm ? (
+          <SignUpForm setUser={setUser} />
+        ) : (
+          <LoginForm setUser={setUser} />
+        )}
+        <button type="submit" className="btn btn-primary" onClick={toggleForm}>
+          {showLoginForm ? "Have an Account? Login Instead" : "No Account? Sign Up Here" }
+        </button>
+      </div>
+    )}
+  </main>
+);
 }

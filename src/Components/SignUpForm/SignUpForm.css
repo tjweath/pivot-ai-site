@@ -1,19 +1,9 @@
-  .container-mt-5 {
+.container-mt-5 {
     border: 2px solid black; 
     border-radius: 10px;
     margin: auto;
+    padding: 25px;
     margin-bottom: 5vmin;
     max-width: 600px; 
     background-color: #e7f5ff; 
   }
-
-  .error-message {
-    margin-top: 1px;
-  }
-
-  .col-sm-8-custom button {
-    margin-bottom: 1px; 
-  }
-  
-  
-  
