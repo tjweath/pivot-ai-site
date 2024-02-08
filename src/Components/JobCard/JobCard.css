@@ -1,7 +1,6 @@
 .company-logo {
   width: 75px;
   height: 75px;
-  background-color: #1971c2;
   border-radius: 50%;
   border: 2px solid black;
   margin-right: 15px;
@@ -16,11 +15,11 @@
   margin-bottom: 5vmin;
   max-width: 600px; 
   background-color: #e7f5ff; 
-  position: relative; /* Ensure position is relative */
+  position: relative; 
 }
 
 .job-card-content {
-  pointer-events: none; /* Disable pointer events for the content */
+  pointer-events: none; 
 }
 
 .job-card.no-hover {
