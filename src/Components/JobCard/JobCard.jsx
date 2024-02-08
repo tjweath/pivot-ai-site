@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./JobCard.css";
 
 const JobCard = ({ jobs, hoveredIndex, handleHover, handleLeave }) => {
-  // Function to get a color from the list based on the index
   const getColor = (index) => {
     const colors = ['#b2f2bb', '#4dabf7', '#1971c2', '#40c057'];
     return colors[index % colors.length];

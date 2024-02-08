@@ -47,22 +47,19 @@ export default function JobListPage() {
   const handleLoadMore = () => {
     let nextVisibleJobCount = visibleJobCount + 7;
 
-    // Filter the displayed jobs based on current filters
+   
     const filteredJobs = jobs.filter((job) => {
       const locationFilterMatch = job.location.area.some((area) => {
         return area.toLowerCase().includes(locationFilter.toLowerCase());
       });
 
-      // Apply salary filter
+     
       const salaryFilterMatch = salaryFilter
         ? job.salary_min >= salaryFilter
         : true;
-
-      // Return true if both location and salary match
       return locationFilterMatch && salaryFilterMatch;
     });
 
-    // Update displayedJobs with filtered list and new visible job count
     setDisplayedJobs(filteredJobs.slice(0, nextVisibleJobCount));
     setVisibleJobCount(nextVisibleJobCount);
     setShowBackToTop(true);

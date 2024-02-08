@@ -1,6 +1,4 @@
-/* UserProfile.css */
 
-/* Adjust font sizes for mobile responsiveness */
 .job-card-user-profile {
     font-size: 16px;
   }
@@ -9,15 +7,15 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    font-size: 20px; /* Adjust logo size */
+    font-size: 20px; 
   }
   
   .toggle-button,
   .delete-button {
-    font-size: 16px; /* Adjust button font size */
+    font-size: 16px; 
   }
   
-  /* Media query for smaller devices */
+ 
   @media only screen and (max-width: 600px) {
     .mobile-title {
       font-size: 14px !important;

@@ -28,7 +28,7 @@ export default function LoginForm({ setUser }) {
     <div className="container-mt-5">
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="mb-3 row justify-content-center">
-          <div className="col-sm-8"> {/* Adjusted column size */}
+          <div className="col-sm-8"> 
             <label htmlFor="email" className="form-label">Email</label>
             <input
               type="text"
@@ -42,7 +42,7 @@ export default function LoginForm({ setUser }) {
           </div>
         </div>
         <div className="mb-3 row justify-content-center">
-          <div className="col-sm-8"> {/* Adjusted column size */}
+          <div className="col-sm-8"> 
             <label htmlFor="password" className="form-label">Password</label>
             <input
               type="password"
@@ -56,7 +56,7 @@ export default function LoginForm({ setUser }) {
           </div>
         </div>
         <div className="mb-3 row justify-content-center">
-          <div className="col-sm-8-custom"> {/* Adjusted column size */}
+          <div className="col-sm-8-custom"> 
             <button type="submit" className="btn btn-primary">LOG IN</button>
           </div>
         </div>

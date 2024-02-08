@@ -16,7 +16,6 @@
   align-items: center;
 }
 
-/* Responsive Styles */
 @media only screen and (max-width: 600px) {
   .about-us-container {
     padding: 10px;

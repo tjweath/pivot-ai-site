@@ -3,7 +3,7 @@
   cursor: default;
   border: 2px solid black; 
   border-radius: 10px;
-  padding: 20px; /* Adjusted padding */
+  padding: 20px; 
   margin-bottom: 5vmin;
   max-width: 600px; 
   position: relative;
@@ -27,11 +27,11 @@
   color: #ffffff; 
   border: none;
   border-radius: 5px;
-  padding: 0 15px; /* Adjusted padding */
-  font-size: 14px; /* Adjusted font size */
+  padding: 0 15px; 
+  font-size: 14px; 
   cursor: pointer;
   transition: background-color 0.3s ease;
-  line-height: 40px; /* Center the text vertically */
+  line-height: 40px; 
 }
 
 .job-card-detail .button-container .btn:hover {
@@ -63,6 +63,6 @@
 
 @media only screen and (max-width: 768px) {
   .job-card-detail {
-    margin: 20px !important; /* Apply margin for mobile-friendly view */
+    margin: 20px !important; 
   }
 }

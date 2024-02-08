@@ -57,7 +57,7 @@ export default function JobDetailPage() {
               {saved ? "Job Saved" : "Save Job"}
             </button>
           ) : (
-            <Link to="/profile" className="btn btn-primary"> {/* Redirect to profile page if not authenticated */}
+            <Link to="/profile" className="btn btn-primary">
               Save Job
             </Link>
           )}
