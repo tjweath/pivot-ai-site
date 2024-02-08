@@ -6,7 +6,8 @@
   padding: 25px;
   margin-bottom: 5vmin;
   max-width: 600px; 
-  position: relative
+  position: relative;
+  margin: 0 auto; 
 }
 
 .job-card-detail h1 {
@@ -43,12 +44,12 @@
 
 @media only screen and (max-width: 768px) {
   .job-card-detail p {
-    font-size: 14px; 
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .job-card-detail {
-    margin: 20px;
+    margin: 20px !important; /* Apply margin for mobile-friendly view */
   }
 }

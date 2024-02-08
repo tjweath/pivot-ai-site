@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import "./JobDetailPage.css";
 
-// Define isAuthenticated function here
 const isAuthenticated = () => {
   const token = localStorage.getItem('token');
   return !!token;
@@ -49,7 +48,7 @@ export default function JobDetailPage() {
         </p>
         <p>{job.location.area[3] || job.location.area[4]}</p>
         <div className="button-container">
-          { isAuthenticated() ? ( // Check if the user is authenticated
+          { isAuthenticated() ? ( 
             <button
               onClick={handleSaveJob}
               disabled={saved}
