@@ -1,0 +1,37 @@
+/* UserProfile.css */
+
+/* Adjust font sizes for mobile responsiveness */
+.job-card-user-profile {
+    font-size: 16px;
+  }
+  
+  .company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px; /* Adjust logo size */
+  }
+  
+  .toggle-button,
+  .delete-button {
+    font-size: 16px; /* Adjust button font size */
+  }
+  
+  /* Media query for smaller devices */
+  @media only screen and (max-width: 600px) {
+    .mobile-text-header {
+      font-size: 15px !important; /* Adjust font size for smaller devices */
+    }
+  
+    .company-logo {
+      width: 40px;
+      height: 40px;
+      font-size: 16px; /* Adjust logo size for smaller devices */
+    }
+  
+    .toggle-button,
+    .delete-button {
+      font-size: 10px; /* Adjust button font size for smaller devices */
+    }
+  }
+  

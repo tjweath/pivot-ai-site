@@ -7,3 +7,11 @@
     max-width: 600px; 
     background-color: #e7f5ff; 
   }
+
+  @media screen and (max-width: 767px) {
+    .container-mt-5 {
+        font-size: 14px; /* Adjust the font size as needed */
+        margin: 20px; /* Adjust the margin as needed */
+    }
+}
+
