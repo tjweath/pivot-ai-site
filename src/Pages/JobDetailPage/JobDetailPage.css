@@ -1,18 +1,41 @@
- .job-card h1 {
-    color: #1971C2;
+.job-card.no-hover {
+  cursor: default;
+}
+
+.job-card h1 {
+  color: #1971C2;
+}
+
+.job-card .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.job-card .button-container .btn {
+  margin-right: 10px;
+  height: 40px;
+}
+
+.job-card .map-container {
+  margin-top: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 450px;
+}
+
+.job-card .map-container iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+}
+
+.job-card p {
+  font-size: 18px; 
+}
+
+@media only screen and (max-width: 768px) {
+  .job-card p {
+    font-size: 14px; 
   }
-  
-  .job-card .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .job-card .button-container .btn {
-    margin-right: 10px;
-    height: 50px;
-  }
-  
-  .job-card .map-container {
-    margin-top: 20px;
-  }
+}
