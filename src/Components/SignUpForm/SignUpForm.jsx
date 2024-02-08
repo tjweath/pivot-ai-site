@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { signUp } from '../../utilities/users-service';
+import "../SignUpForm/SignUpForm.css"
 
 
 export default class SignUpForm extends Component {
@@ -23,15 +24,10 @@ export default class SignUpForm extends Component {
       try {
         const {name, email, password} = this.state;
         const formData = {name, email, password};
-        // The promise returned by the signUp service
-        // method will resolve to the user object included
-        // in the payload of the JSON Web Token (JWT)
         const user = await signUp(formData);
         this.props.setUser(user);
       
       } catch {
-        // An error occurred
-        // Probably due to a duplicate email
         this.setState({ error: 'Sign Up Failed - Try Again' });
       }
     };
@@ -41,7 +37,7 @@ export default class SignUpForm extends Component {
         const disable = this.state.password !== this.state.confirm;
         return (
           <div>
-          <div className="container mt-5">
+          <div className="container-mt-5">
             <form autoComplete="off" onSubmit={this.handleSubmit}>
               <div className="mb-3 row justify-content-center">
                 <div className="col-sm-6">
@@ -108,6 +104,7 @@ export default class SignUpForm extends Component {
           </div>
           <p className="error-message">&nbsp;{this.state.error}</p>
         </div>
+        
       );
     }
   }
