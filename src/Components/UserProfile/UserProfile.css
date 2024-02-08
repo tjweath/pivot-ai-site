@@ -19,23 +19,37 @@
   
   /* Media query for smaller devices */
   @media only screen and (max-width: 600px) {
-    .mobile-text-header {
-      font-size: 15px !important; /* Adjust font size for smaller devices */
+    .mobile-title {
+      font-size: 14px !important;
+    }
+
+    .mobile-company {
+        font-size: 14px !important;
+    }
+
+    .mobile-salary {
+        font-size: 14px !important;
+    }
+
+    .mobile-location {
+        font-size: 14px !important;
     }
   
     .company-logo {
       width: 40px;
       height: 40px;
-      font-size: 16px; /* Adjust logo size for smaller devices */
+      font-size: 16px; 
     }
   
     .toggle-button,
     .delete-button {
-      font-size: 10px; /* Adjust button font size for smaller devices */
+      font-size: 12px !important; 
     }
+    
   }
-  
-  .custom-select {
+    .custom-select {
     width: 150px !important; 
     margin-right: 10px;
   }
+
+  
