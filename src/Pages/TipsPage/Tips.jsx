@@ -96,64 +96,91 @@ export default function Tips() {
         <div className="text-center mt-4">
           <h3>Need a CV template?</h3>
         </div>
-        <div className="row">
-          <div className="col-lg-4 col-md-6 mb-4">
+        <div>
+          <div>
             <div>
-              <h3>Simple CV</h3>
-              <img
-                src="/img/simple.png"
-                alt="simple"
-                style={{ Width: "auto", height: "400px" }}
-              />
-              <p>
-                Starting your career journey? 🌱 Want to keep it concise? 📄 Check
-                out this straightforward one-page resume template!
-              </p>
-              <a href="/templates/simple-cv.pdf" download>
-                Download Simple CV
-              </a>
+              <div className="custom-paragraph">
+                <h3>Simple CV</h3>
+                <img
+                  src="/img/simple.png"
+                  alt="simple"
+                  style={{ width: "auto", height: "400px" }}
+                />
+                <br />
+                <br />
+                <p >
+                  Starting your career journey? 🌱 Want to keep it concise? 📄
+                  Check out this straightforward one-page resume template!
+                </p>
+                <br />
+                <a
+                  href="/templates/simple-cv.pdf"
+                  download
+                  className="download"
+                >
+                  Download
+                </a>
+                <br />
+                <br />
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mb-4">
             <div>
-              <h3>Professional CV</h3>
-              <img
-                src="/img/pro.png"
-                alt="professional"
-                style={{ Width: "auto", height: "400px" }}
-              />
-              <p>
-                Ready to showcase your expertise and experience? 💼 Explore our
-                professional CV template designed to impress recruiters!
-              </p>
-              <a href="/templates/professional-cv.pdf" download>
-                Download Professional CV
-              </a>
+              <div className="custom-paragraph">
+                <h3>Professional CV</h3>
+                <img
+                  src="/img/pro.png"
+                  alt="professional"
+                  style={{ width: "auto", height: "400px" }}
+                />
+                <br />
+                <br />
+                <p>
+                  Ready to showcase your expertise and experience? 💼 Explore
+                  our professional CV template designed to impress recruiters!
+                </p>
+                <br />
+                <a
+                  href="/templates/professional-cv.pdf"
+                  download
+                  className="download"
+                >
+                  Download
+                </a>
+                <br />
+                <br />
+              </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mb-4">
             <div>
-              <h3>Modern CV</h3>
-              <img
-                src="/img/modern.png"
-                alt="modern"
-                style={{ Width: "auto", height: "400px" }}
-              />
-              <p>
-                Want to stand out with a sleek and modern design? 🔥 Our modern CV
-                template is perfect for those aiming for a contemporary look!
-              </p>
-              <a href="/templates/modern-cv.pdf" download>
-                Download Modern CV
-              </a>
+              <div className="custom-paragraph">
+                  <h3>Modern CV</h3>
+                <img
+                  src="/img/modern.png"
+                  alt="modern"
+                  style={{ width: "auto", height: "400px" }}
+                />
+                <br />
+                <br />
+                <p>
+                  Want to stand out with a sleek and modern design? 🔥 Our
+                  modern CV template is perfect for those aiming for a
+                  contemporary look!
+                </p>
+                <br />
+                <a
+                  href="/templates/modern-cv.pdf"
+                  download
+                  className="download"
+                >
+                  Download
+                </a>
+                <br />
+                <br />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <button
-        className="btn btn-secondary mx-2 mb-4"
-        onClick={handleBackUp}
-      >
+      <button className="btn btn-secondary mx-2 mb-4" onClick={handleBackUp}>
         Back Up
       </button>
     </div>

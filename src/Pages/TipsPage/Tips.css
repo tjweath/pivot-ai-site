@@ -1,10 +1,11 @@
 .custom-card {
-  border: 2px solid black !important;
-  border-radius: 10px !important;
-  padding: 25px !important;
-  margin: 0 auto 20px !important;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto 20px;
   max-width: 600px;
-  background-color: #e7f5ff !important;
+  height: 250px;
+  background-color: #a2d4f6;
 }
 
 .btn-primary {
@@ -35,31 +36,29 @@
   align-items: center;
 }
 
-.centered-grid {
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .col-md-6 {
-    width: 100%;
-  }
-}
-
-.cvdesc {
-  text-align: center;
-}
-
-.para-wrap{
-
-}
-
 .container-template {
   display: flex;
   flex-direction: column;
+}
 
+.custom-paragraph {
+  border: 2px solid black !important;
+  border-radius: 10px !important;
+  margin: auto !important;
+  padding: 15px !important;
+  margin-bottom: 5vmin !important;
+  max-width: 500px !important;
+  height: 700px !important;
+  background-color: #e7f5ff;
+}
+
+.download {
+  background-color: white;
+  padding: 10px;
+  border: solid 3px;
+}
+
+.row {
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
