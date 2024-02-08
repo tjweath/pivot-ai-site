@@ -63,12 +63,12 @@ export default function UserProfile({ user, setUser }) {
                   ></div>
                   <div style={{ marginLeft: "15px", textAlign: "left" }}>
                     <h2
-                      className="mobile-text-header"
+                      className="mobile-title"
                       style={{ color: "#1971C2", margin: 0, fontSize: "25px" }}
                     >
                       {job.title.toUpperCase()}
                     </h2>
-                    <h3 style={{ margin: 0, color: "black", fontSize: "20px" }}>
+                    <h3 className="mobile-company" style={{ margin: 0, color: "black", fontSize: "20px" }}>
                       {job.company.display_name.toUpperCase()}
                     </h3>
                     <div
@@ -80,6 +80,7 @@ export default function UserProfile({ user, setUser }) {
                     >
                       <p
                         style={{ margin: 0, fontSize: "20px", color: "black" }}
+                        className="mobile-salary"
                       >
                         £
                         {job.salary_max.toLocaleString("en-GB", {
@@ -93,6 +94,7 @@ export default function UserProfile({ user, setUser }) {
                           fontSize: "20px",
                           color: "black",
                         }}
+                        className="mobile-location"
                       >
                         📍{" "}
                         {job.location.area[3] || job.location.area[4] || "UK"}
@@ -116,7 +118,7 @@ export default function UserProfile({ user, setUser }) {
               value={job.status}
               onChange={(e) => handleToggleApplication(index, e.target.value)}
             >
-              <option value="notApplied">Not Applied</option>
+              <option value="notApplied" >Not Applied</option>
               <option value="applied">Applied</option>
               <option value="interviewing">Interviewing</option>
               <option value="hired">Hired</option>
