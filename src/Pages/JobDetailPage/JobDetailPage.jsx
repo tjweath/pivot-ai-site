@@ -43,13 +43,12 @@ export default function JobDetailPage() {
         <h1>{job.title}</h1>
         <h3>{job.company.display_name.toUpperCase()}</h3>
         <p><strong>Job Description:</strong> {job.description}</p>
-        <p>
-          Salary: £
+        <p><strong> Salary: </strong>£
           {job.salary_min.toLocaleString("en-GB", { maximumFractionDigits: 0 })}
           +
         </p>
         <p>{job.location.area[3] || job.location.area[4]}</p>
-        <p>Date Added: {formattedCreatedDate}</p>
+        <p><strong>Date Added:</strong> {formattedCreatedDate}</p>
         <div className="button-container">
           { isAuthenticated() ? ( 
             <button
