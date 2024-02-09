@@ -49,7 +49,7 @@ export default function JobDetailPage() {
           +
         </p>
         <p>{job.location.area[3] || job.location.area[4]}</p>
-        <p>Date Added:{formattedCreatedDate}</p>
+        <p>Date Added: {formattedCreatedDate}</p>
         <div className="button-container">
           { isAuthenticated() ? ( 
             <button
