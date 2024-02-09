@@ -140,7 +140,7 @@ export default function UserProfile({ user, setUser }) {
             </button>
             <select
               className={`btn ${
-                job.status === "applied" ? "btn-success" : "btn-primary"
+                job.status === "applied" ? "btn-primary" : "btn-primary"
               } toggle-button custom-select`}
               value={job.status}
               onChange={(e) => handleToggleApplication(index, e.target.value)}
