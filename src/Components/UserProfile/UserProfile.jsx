@@ -66,10 +66,21 @@ export default function UserProfile({ user, setUser }) {
                       className="mobile-title"
                       style={{ color: "#1971C2", margin: 0, fontSize: "25px" }}
                     >
-                      {job.title.toUpperCase()}
+                      {job.title
+                        .split(" ")
+                        .slice(0, 3)
+                        .join(" ")
+                        .toUpperCase()}
                     </h2>
-                    <h3 className="mobile-company" style={{ margin: 0, color: "black", fontSize: "20px" }}>
-                      {job.company.display_name.toUpperCase()}
+                    <h3
+                      className="mobile-company"
+                      style={{ margin: 0, color: "black", fontSize: "20px" }}
+                    >
+                      {job.company.display_name
+                        .split(" ")
+                        .slice(0, 2)
+                        .join(" ")
+                        .toUpperCase()}
                     </h3>
                     <div
                       style={{
@@ -118,7 +129,7 @@ export default function UserProfile({ user, setUser }) {
               value={job.status}
               onChange={(e) => handleToggleApplication(index, e.target.value)}
             >
-              <option value="notApplied" >Not Applied</option>
+              <option value="notApplied">Not Applied</option>
               <option value="applied">Applied</option>
               <option value="interviewing">Interviewing</option>
               <option value="hired">Hired</option>
@@ -128,4 +139,4 @@ export default function UserProfile({ user, setUser }) {
       </div>
     </div>
   );
-}
+            }
