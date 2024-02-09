@@ -4,7 +4,7 @@
   border: 2px solid black; 
   border-radius: 10px;
   padding: 20px; 
-  margin-bottom: 5vmin;
+  margin-bottom: 20px;
   max-width: 600px; 
   position: relative;
   margin: 0 auto; 
@@ -65,4 +65,8 @@
   .job-card-detail {
     margin: 20px !important; 
   }
+}
+
+.job-card-container {
+  margin-bottom: 20px; /* Adjust margin-bottom value as needed */
 }

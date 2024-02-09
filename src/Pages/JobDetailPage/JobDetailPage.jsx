@@ -39,6 +39,7 @@ export default function JobDetailPage() {
 
   return (
     <>
+    <div className="job-card-container">
       <div className="job-card-detail no-hover">
         <h1>{job.title}</h1>
         <h3>{job.company.display_name.toUpperCase()}</h3>
@@ -78,6 +79,7 @@ export default function JobDetailPage() {
             title="Google Maps"
           ></iframe>
         </div>
+      </div>
       </div>
     </>
   );
