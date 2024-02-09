@@ -9,6 +9,22 @@ export default function UserProfile({ user, setUser }) {
   const [userData, setUserData] = useState(null);
   const [savedJobs, setSavedJobs] = useState([]);
 
+  const statusColor = (status) => {
+    let color = "";
+    switch (status) {
+      case "applied":
+        color = "job-applied";
+        break;
+      case "interviewing":
+        color = "job-interviewing";
+        break;
+      case "hired":
+        color = "job-hired";
+        break;
+    }
+    return color;
+  };
+
   useEffect(() => {
     const fetchUserData = async () => {
       const userData = await getUser();
@@ -26,13 +42,14 @@ export default function UserProfile({ user, setUser }) {
     localStorage.setItem("savedJobs", JSON.stringify(updatedSavedJobs));
   };
 
-  const handleToggleApplication = (index) => {
+  const handleToggleApplication = (index, newStatus) => {
     const updatedSavedJobs = [...savedJobs];
-    updatedSavedJobs[index].applied = !updatedSavedJobs[index].applied;
+    updatedSavedJobs[index].status = newStatus;
     setSavedJobs(updatedSavedJobs);
     localStorage.setItem("savedJobs", JSON.stringify(updatedSavedJobs));
   };
-
+  
+  
   const getColor = (index) => {
     const colors = ["#b2f2bb", "#4dabf7", "#1971c2", "#40c057"];
     return colors[index % colors.length];
@@ -42,12 +59,15 @@ export default function UserProfile({ user, setUser }) {
     <div className="card-text-center">
       <div className="card-header"></div>
       <div>
-        <h1>Hi {userData?.name}!</h1>
+        <h2>Hi {userData?.name}!</h2>
       </div>
-      <h1>Saved Jobs</h1>
+      <h3>Saved Jobs</h3>
       <div className="job-cards-container">
         {savedJobs.map((job, index) => (
-          <div key={index} className="job-card-user-profile">
+          <div
+            key={index}
+            className={`job-card-user-profile ${statusColor(job.status)}`}
+          >
             <Link to={`/job/${job.id}`} state={job} className="Link">
               <div className="job-details">
                 <div
@@ -66,11 +86,7 @@ export default function UserProfile({ user, setUser }) {
                       className="mobile-title"
                       style={{ color: "#1971C2", margin: 0, fontSize: "25px" }}
                     >
-                      {job.title
-                        .split(" ")
-                        .slice(0, 3)
-                        .join(" ")
-                        .toUpperCase()}
+                      {job.title.split(" ").slice(0, 3).join(" ").toUpperCase()}
                     </h2>
                     <h3
                       className="mobile-company"
@@ -139,4 +155,4 @@ export default function UserProfile({ user, setUser }) {
       </div>
     </div>
   );
-            }
+}
