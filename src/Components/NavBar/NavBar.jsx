@@ -14,7 +14,7 @@ export default function NavBar() {
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               Job Listings
             </NavLink>
@@ -22,7 +22,7 @@ export default function NavBar() {
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/tips"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               CV Templates
             </NavLink>
@@ -30,7 +30,7 @@ export default function NavBar() {
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/profile"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               My Jobs
             </NavLink>
@@ -38,7 +38,7 @@ export default function NavBar() {
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/about-us"
-              activeClassName="active-link"
+              activeclassname="active-link"
             >
               About Us
             </NavLink>

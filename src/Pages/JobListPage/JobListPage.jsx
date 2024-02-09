@@ -26,7 +26,6 @@ export default function JobListPage() {
         );
 
         setJobs(response.data.results);
-        console.log(response.data.results);
         setDisplayedJobs(response.data.results.slice(0, visibleJobCount));
       } catch (error) {
         console.error("Error fetching job data:", error);
