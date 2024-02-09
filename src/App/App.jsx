@@ -5,7 +5,8 @@ import './App.css';
 import JobListPage from '../Pages/JobListPage/JobListPage';
 import ProfilePage from '../Pages/ProfilePage/ProfilePage';
 import JobDetailPage from '../Pages/JobDetailPage/JobDetailPage';
-import Tips from '../Pages/Tips.jsx/Tips';
+import Tips from '../Pages/TipsPage/Tips';
+import AboutUs from '../Pages/AbousUsPage/AboutUsPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/tips" element={<Tips />} />
         <Route path="/" element={<JobListPage />} />
         <Route path='/job/:id' Component={JobDetailPage}/>
+        <Route path='/about-us' element={< AboutUs />} />
       </Routes>
     </div>
   );

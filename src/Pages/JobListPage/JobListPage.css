@@ -19,17 +19,14 @@
   input[type="text"],
   select {
     width: 100% !important; 
-    max-width: 150px !important;
     text-align: center !important; 
   }
 
   button.btn-primary {
     margin-right: 10px;
     margin-bottom: 20px;
-    background-color: #893bd7;
   }
   
   .back-to-top.btn-primary {
-    background-color: #893bd7;
     margin-bottom: 20px;
   }
