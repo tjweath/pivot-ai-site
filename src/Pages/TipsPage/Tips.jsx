@@ -12,7 +12,7 @@ export default function Tips() {
   return (
     <div className="centered-container">
       <div className="container mt-2">
-        <h1 className="text-center mb-4">Tips for Creating an Effective CV</h1>
+        <h1 className="text-center mb-4 tips-title">Tips for Creating an Effective CV</h1>
         <div className="row">
           <div className="col-md-6">
             <div className="card mb-4 custom-card">
@@ -94,17 +94,18 @@ export default function Tips() {
           </div>
         </div>
         <div className="text-center mt-4">
-          <h3>Need a CV template?</h3>
+          <h3 className="main-title">Need a CV template?</h3>
         </div>
         <div>
           <div>
             <div>
               <div className="custom-paragraph">
-                <h3>Simple CV</h3>
+                <h3 className="template-title">Simple CV</h3>
                 <img
                   src="/img/simple.png"
                   alt="simple"
-                  style={{ width: "auto", height: "400px" }}
+                  style={{ width: "auto", height: "400px",
+                  border: "2px solid black" }}
                 />
                 <br />
                 <br />
@@ -126,11 +127,12 @@ export default function Tips() {
             </div>
             <div>
               <div className="custom-paragraph">
-                <h3>Professional CV</h3>
+                <h3 className="template-title">Professional CV</h3>
                 <img
                   src="/img/pro.png"
                   alt="professional"
-                  style={{ width: "auto", height: "400px" }}
+                  style={{ width: "auto", height: "400px",
+                  border: "2px solid black" }}
                 />
                 <br />
                 <br />
@@ -152,11 +154,13 @@ export default function Tips() {
             </div>
             <div>
               <div className="custom-paragraph">
-                  <h3>Modern CV</h3>
+                  <h3 className="template-title">Modern CV</h3>
                 <img
                   src="/img/modern.png"
                   alt="modern"
-                  style={{ width: "auto", height: "400px" }}
+                  style={{ width: "auto", height: "400px",
+                  border: "2px solid black"  }}
+                  
                 />
                 <br />
                 <br />
@@ -180,7 +184,7 @@ export default function Tips() {
           </div>
         </div>
       </div>
-      <button className="btn btn-secondary mx-2 mb-4" onClick={handleBackUp}>
+      <button className="btn btn-primary mx-2 mb-4" onClick={handleBackUp}>
         Back Up
       </button>
     </div>

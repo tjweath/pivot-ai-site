@@ -28,7 +28,7 @@ const JobCard = ({ jobs, hoveredIndex, handleHover, handleLeave }) => {
                   <div className="company-logo" style={{ backgroundColor: getColor(index) }}>
                   </div>
                   <div style={{ marginLeft: "15px", textAlign: "left" }}>
-                    <h2 className="jobtitle" style={{ color: "#1971C2", margin: 0, fontSize: "23px"}}>
+                    <h2 className="jobtitle" style={{ color: "#1971C2", margin: 0, fontSize: "23px", fontWeight: "bold"}}>
                       {shortJobTitle.toUpperCase()}
                     </h2>
                     <h3 className="companyname" style={{ margin: 0, color: "black", fontSize: "19px" }}>
