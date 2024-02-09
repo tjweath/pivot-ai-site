@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -6,46 +6,42 @@ export default function NavBar() {
     <nav className="navbar bg-ebfbee">
       <div className="container text-center d-flex flex-column align-items-center justify-content-center vh-10 mt-3">
         <div>
-          <Link to="/" className="navbar-title fs-10 title-style" style={{ textDecoration: 'none', color: 'black', fontSize: '7vmin' }}>
+          <NavLink to="/" className="navbar-title fs-10 title-style" style={{ textDecoration: 'none', color: 'black', fontSize: '7vmin' }}>
             💻 inTech
-          </Link>
+          </NavLink>
           <div className="d-flex links">
-            <Link
-              id="link"
+            <NavLink
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/"
               activeClassName="active-link"
             >
               Job Listings
-            </Link>
-            <Link
-              id="link"
+            </NavLink>
+            <NavLink
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/tips"
               activeClassName="active-link"
             >
               CV Templates
-            </Link>
-            <Link
-              id="link"
+            </NavLink>
+            <NavLink
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/profile"
               activeClassName="active-link"
             >
               My Jobs
-            </Link>
-            <Link
-              id="link"
+            </NavLink>
+            <NavLink
               className="nav-link mx-3 link-style"
               style={{ color: '#1971c2', transition: 'color 0.3s' }}
               to="/about-us"
               activeClassName="active-link"
             >
               About Us
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>

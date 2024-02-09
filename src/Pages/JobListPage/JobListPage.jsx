@@ -102,22 +102,22 @@ export default function JobListPage() {
 
   return (
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="filter">
+      <div className="container">
+        <div className="row">
+          <div className="filter">
             <input
               type="text"
               id="locationFilter"
-              class="form-control"
+              className="form-control"
               placeholder="Location"
               value={locationFilter}
               onChange={handleFilterChange}
             />
           </div>
-          <div class="filter">
+          <div className="filter">
             <select
               id="salaryFilter"
-              class="form-control"
+              className="form-control"
               value={salaryFilter}
               onChange={handleFilterChange}
             >
