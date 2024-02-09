@@ -22,7 +22,7 @@ export default function JobDetailPage() {
     return <div>Loading...</div>;
   }
 
-  const formattedCreatedDate = job.created ? job.created.slice(0,10) : ""
+  const formattedCreatedDate = job.created ? job.created.slice(0,10).split("-").reverse().join("-") : "";
 
   const generateGoogleMapsEmbedUrl = (area) => {
     const defaultArea = "UK";
@@ -49,7 +49,7 @@ export default function JobDetailPage() {
           +
         </p>
         <p>{job.location.area[3] || job.location.area[4]}</p>
-        <p>Added Date:{formattedCreatedDate}</p>
+        <p>Date Added:{formattedCreatedDate}</p>
         <div className="button-container">
           { isAuthenticated() ? ( 
             <button
