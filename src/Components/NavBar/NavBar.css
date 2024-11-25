@@ -1,6 +1,6 @@
 .title-style {
     text-decoration: none !important;
-    color: black !important;
+    color: rgb(0, 166, 255) !important;
     font-size: 15vmin !important; 
     transition: transform 0.3s !important; 
 }

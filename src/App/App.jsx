@@ -25,7 +25,7 @@ function App() {
         </p>
         
         <div className="tech-stack-section">
-          <h4>What are some of the benefits of AI Automation?</h4>
+          <h4>What are the benefits of AI Automation?</h4>
           <p/>Increased Efficiency and Productivity<p/>
           <p/>Cost Savings<p/>
           <p/>Enhanced Customer Experience<p/>
@@ -72,3 +72,5 @@ function App() {
 }
 
 export default App;
+
+
