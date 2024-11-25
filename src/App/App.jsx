@@ -35,20 +35,37 @@ function App() {
       </div>
 
       <div className="features-section">
-        <h4>Contact Pivot-AI</h4>
+        <h4>About Pivot-AI</h4>
         <p>
         Pivot-AI was founded in 2025 by Tim Weatherseed, a seasoned professional
         with over 20 years of experience across various industries. Driven by a
         passion for leveraging technology to enhance client workflows, Tim set
         out to master AI automation and use it to deliver transformative solutions
         for businesses.
-          <br />
-          <br />
-          E-mail Tim directly:
-          <a href="mailto:t_weatherseed@hotmail.com">t_weatherseed@hotmail.com</a>
         </p>
       </div>
     </div>
+    <footer className="footer">
+    <div className="footer-contact">
+          <h3 className="footer-heading">Contact</h3>
+          <p>
+            <a href="mailto:t_weatherseed@hotmail.com" className="footer-link">
+              Email
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/tim-weatherseed-0b35b14b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              LinkedIn
+            </a>
+          </p>
+          </div>
+        <p>&copy; 2025 Pivot-AI. All rights reserved.</p>
+      </footer>
     </div>
     
   );
