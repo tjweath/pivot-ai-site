@@ -46,7 +46,7 @@
   margin-bottom: 10px;
 } */
 
-.about-section {
+.about-section { /* first box */
   border: 2px solid #007bff;
   border-radius: 20px;
   padding: 20px;
@@ -58,7 +58,7 @@
 }
 
 .about-section h1 {
-  font-size: 30px;
+  font-size: 30px; 
 }
 
 .about-section h2 {
@@ -73,8 +73,8 @@
   line-height: 1.6;
 }
 
-.features-section {
-  border: 2px solid #28a745;
+.features-section { /* last box */
+  border: 2px solid #007bff;
   border-radius: 20px;
   padding: 20px;
   margin: 0 auto 30px;
@@ -89,21 +89,49 @@
   font-size: 24px;
   margin-bottom: 15px;
 }
-
+x
 .features-section p {
   color: #333;
   font-size: 16px;
   line-height: 1.6;
 }
 
-.tech-stack-section{
+/* .tech-stack-section{
   margin-bottom: 20px;
   margin-right: 5px;
+} */
+
+.tech-stack-section{
+  border: 2px solid #007bff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  max-width: 700px;
+  height: auto;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
 }
 
 .footer-heading {
   color: rgb(0, 166, 255)
 }
+
+.tech-stack-list {
+  list-style: none; /* Removes bullet points */
+  padding: 0;       /* Removes default padding */
+  margin: 0;        /* Removes default margin */
+}
+
+.tech-stack-list li {
+  padding: 10px 0; /* Adds spacing between items */
+  font-size: 16px; /* Adjust as needed */
+  border-bottom: 1px solid #ddd; /* Optional: Adds a subtle divider */
+}
+
+.tech-stack-list li:last-child {
+  border-bottom: none; /* Removes border for the last item */
+}
+
 
 @media only screen and (max-width: 600px) {
   .about-section,
