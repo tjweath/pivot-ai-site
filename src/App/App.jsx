@@ -51,7 +51,7 @@ function App() {
         <div className="footer-contact">
           <h3 className="footer-heading">Contact</h3>
           <p>
-            <a href="mailto:t_weatherseed@hotmail.com" className="footer-link">
+            <a href="mailto:tim@pivot-ai.org" className="footer-link">
               Email
             </a>
           </p>
